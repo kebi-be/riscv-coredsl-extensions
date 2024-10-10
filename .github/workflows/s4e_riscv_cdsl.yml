@@ -24,15 +24,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: riscv-core-dsl-files
-        path: /home/runner/work/riscv-coredsl-extensions/riscv-coredsl-extensions/*.core_desc  
-        
-    - name: Trigger ETISS Workflow
-      uses: peter-evans/repository-dispatch@v3
-      with:
-        token: ${{ secrets.REPO_ACCESS_TOKEN }}
-        repository: ${{ 'kebi-be/etiss_wysiwyng' }}
-        event-type: s4e-cdl-event
-        client-payload: '{"triggered_by": "${{ github.repository }}", "run_id": "${{ github.run_id }}"}'        
+        path: /home/runner/work/riscv-coredsl-extensions/riscv-coredsl-extensions/*.core_desc      
         
     - name: Trigger Seal5 Workflow
       uses: peter-evans/repository-dispatch@v3
