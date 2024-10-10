@@ -30,7 +30,7 @@ jobs:
       uses: peter-evans/repository-dispatch@v3
       with:
         token: ${{ secrets.REPO_ACCESS_TOKEN }}
-        repository: ${{ 'bkebianyor/seal5'}}
+        repository: ${{ 'kebi-be/seal5'}}
         event-type: s4e-cdl-event
         client-payload: '{"triggered_by": "${{ github.repository }}", "run_id": "${{ github.run_id }}"}'
     
@@ -38,7 +38,7 @@ jobs:
       uses: peter-evans/repository-dispatch@v3
       with:
         token: ${{ secrets.REPO_ACCESS_TOKEN }}
-        repository: ${{ 'bkebianyor/etiss_wysiwyng' }}
+        repository: ${{ 'kebi-be/etiss_wysiwyng' }}
         event-type: s4e-cdl-event
         client-payload: '{"triggered_by": "${{ github.repository }}", "run_id": "${{ github.run_id }}"}'
         
