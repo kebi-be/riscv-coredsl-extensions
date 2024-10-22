@@ -27,7 +27,7 @@ jobs:
       uses: peter-evans/repository-dispatch@v3
       with:
         token: ${{ secrets.REPO_ACCESS_TOKEN }}
-        repository: ${{ 'kebi-be/etiss_wysiwyng' }}
+        repository: ${{ 'kebi-be/etiss' }}
         event-type: s4e-cdl-event
         client-payload: '{"triggered_by": "${{ github.repository }}", "run_id": "${{ github.run_id }}"}'
         
